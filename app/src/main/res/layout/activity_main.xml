@@ -11,14 +11,18 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottomNav"></FrameLayout>
+        android:layout_above="@id/bottomNav">
+    </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/main_bottom_nav">
+        app:menu="@menu/main_bottom_nav"
+        app:itemIconTint="@color/tokpedgreen"
+        android:backgroundTint="@color/tokpedgreen"
+        app:itemTextColor="@color/tokpedgreen">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
