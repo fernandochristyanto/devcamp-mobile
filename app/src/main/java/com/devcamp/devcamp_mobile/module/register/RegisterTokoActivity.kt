@@ -8,7 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.devcamp.devcamp_mobile.R
 import com.devcamp.devcamp_mobile.common.dto.ShopRegistrationDTO
-import com.devcamp.devcamp_mobile.module.Register.RegisterTokoViewModel
+import com.devcamp.devcamp_mobile.module.register.RegisterTokoViewModel
 import com.devcamp.devcamp_mobile.module.login.LoginViewModel
 import com.google.gson.annotations.SerializedName
 
@@ -31,9 +31,6 @@ class RegisterTokoActivity : AppCompatActivity() {
         viewModel.shopStatus.observe(this, Observer {
 
         })
-
-
-
 
 //        @SerializedName("name") var name: String,
 //        @SerializedName("location") var location: String,
