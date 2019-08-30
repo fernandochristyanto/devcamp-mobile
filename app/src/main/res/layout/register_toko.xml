@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:padding="10dp"
+
+              android:layout_height="match_parent" android:id="@+id/linearLayout">
+
+
+    <TextView
+            android:text="@string/form_nametoko_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:textSize="30sp"
+
+            android:layout_marginTop="28dp" android:layout_marginStart="24dp"
+            android:layout_marginBottom="8dp"
+    />
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/namatoko" android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+    />
+
+    <TextView
+
+            android:text="Kota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginBottom="8dp"
+
+            android:layout_marginStart="24dp"/>
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/namakota" android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+    />
+
+    <TextView
+            android:text="No. HP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="24dp"
+    />
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/nohp" android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+    />
+
+    <TextView
+            android:text="Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+
+            android:layout_marginTop="8dp" android:layout_marginStart="24dp"
+            android:layout_marginBottom="8dp"
+    />
+
+
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/namatoko" android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+    />
+
+    <TextView
+
+            android:text="Password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginBottom="8dp"
+
+            android:layout_marginStart="24dp"
+            android:id="@+id/textView2"/>
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/password" android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+    />
+
+    <TextView
+            android:text="Confirm Password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="24dp"
+    />
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/confirmpass" android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+    />
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text=""
+            android:layout_gravity="center_horizontal"/>
+
+
+</LinearLayout>
+
+
