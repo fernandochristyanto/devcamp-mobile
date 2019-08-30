@@ -6,10 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.devcamp.devcamp_mobile.R
 import com.devcamp.devcamp_mobile.common.GarageSaleProduct
+import com.devcamp.devcamp_mobile.common.GarageSaleProductListItem
 
-class GarageSaleProductAdapter(val dataList: List<GarageSaleProduct>):RecyclerView.Adapter<GarageSaleProductAdapter.GarageSaleProductViewHolder>() {
+class GarageSaleProductAdapter(val dataList: List<GarageSaleProductListItem>):RecyclerView.Adapter<GarageSaleProductAdapter.GarageSaleProductViewHolder>() {
 
     class GarageSaleProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imItemImage: ImageView
@@ -27,25 +29,18 @@ class GarageSaleProductAdapter(val dataList: List<GarageSaleProduct>):RecyclerVi
         }
     }
 
-    override fun getItemCount(): Int {
-
-        if (null != dataList) {
-            return dataList!!.size
-        } else {
-            return 0
-        }
-    }
+    override fun getItemCount(): Int = dataList.size
 
     override fun onBindViewHolder(holder: GarageSaleProductViewHolder, position: Int) {
-        // TODO: Item Image
-        // TODO: Shop Name
-        holder.tvItemName.setText(dataList?.get(position)?.name)
-        holder.tvPrice.setText(dataList?.get(position)?.price.toString())
+        holder.tvItemName.text = dataList[position].name
+        holder.tvPrice.text = dataList[position].price.toString()
+        holder.tvShopName.text = dataList[position].shopName
+        Glide.with(holder.itemView).load(dataList[position].imageUrl).into(holder.imItemImage)
 
-        if (dataList?.get(position)!!.charity) {
-            holder.tvCharity.setText("dana yang didapat akan di donasikan")
+        if (dataList[position].charity) {
+            holder.tvCharity.text = "dana yang didapat akan di donasikan"
         } else {
-            holder.tvCharity.setText("")
+            holder.tvCharity.text = ""
         }
     }
 

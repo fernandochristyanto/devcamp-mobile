@@ -36,6 +36,8 @@ dependencies {
 
     implementation 'com.google.android.material:material:1.0.0'
 
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$androidxLifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-runtime:$androidxLifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-common-java8:$androidxLifecycleVersion"
