@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
         bottomNav = findViewById(R.id.bottomNav)
         container = findViewById(R.id.container )
 
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container, HomeFragment())
+            .commit()
+
         bottomNav.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.item_home -> {
