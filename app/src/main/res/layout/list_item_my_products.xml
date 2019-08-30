@@ -20,23 +20,26 @@
 
             <ImageView
                     android:id="@+id/imItemImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
                     android:id="@+id/tvItemName"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="18dp"
                     android:text="Nama Item"
-                    android:textSize="24sp"
+                    style="@style/TextAppearance.AppCompat.Caption"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/imItemImage"
-                    app:layout_constraintTop_toTopOf="@+id/imItemImage" />
+                    app:layout_constraintTop_toTopOf="@+id/imItemImage"
+                    app:layout_constraintEnd_toStartOf="@id/imageView"
+                    android:textAlignment="viewStart"
+                />
 
             <TextView
                     android:id="@+id/tvRp"
@@ -44,7 +47,6 @@
                     android:layout_height="wrap_content"
                     android:text="Rp "
                     android:textColor="#FF9800"
-                    android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="@id/tvItemName"
                     app:layout_constraintTop_toBottomOf="@id/tvItemName" />
@@ -55,7 +57,6 @@
                     android:layout_height="wrap_content"
                     android:text="15.000"
                     android:textColor="#FF9800"
-                    android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@id/tvRp"
                     app:layout_constraintTop_toBottomOf="@id/tvItemName" />
@@ -73,7 +74,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Stok tersedia: "
-                    android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="@+id/tvRp"
                     app:layout_constraintTop_toBottomOf="@+id/tvRp" />
 
@@ -82,7 +82,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3"
-                    android:textSize="18sp"
                     app:layout_constraintStart_toEndOf="@id/tvTersedia"
                     app:layout_constraintTop_toBottomOf="@+id/tvRp" />
 
