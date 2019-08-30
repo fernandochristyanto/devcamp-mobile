@@ -1,133 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/linearLayout"
               android:layout_width="match_parent"
-              android:orientation="vertical"
-              android:padding="10dp"
+              android:layout_height="match_parent"
 
-              android:layout_height="match_parent" android:id="@+id/linearLayout">
+              android:orientation="vertical" android:padding="10dp">
 
 
     <TextView
-            android:text="@string/form_nametoko_register"
+            android:id="@+id/tvNamaToko"
+            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            android:textSize="30sp"
-
-            android:layout_marginTop="28dp" android:layout_marginStart="24dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Nama Toko"
     />
 
     <EditText
+            android:id="@+id/namatoko"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/namatoko" android:layout_marginStart="24dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
     />
 
     <TextView
-
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:text="Kota"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:layout_marginBottom="8dp"
-
-            android:layout_marginStart="24dp"/>
+    />
 
     <EditText
+            android:id="@+id/etNamaToko"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" android:ems="10"
             android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/namakota" android:layout_marginStart="24dp"
-            android:layout_marginEnd="8dp"
     />
 
     <TextView
-            android:text="No. HP"
+            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="24dp"
+            android:layout_marginBottom="10dp"
+            android:text="No. HP"
     />
     <EditText
+            android:id="@+id/etNoHp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:ems="10"
-            android:id="@+id/nohp" android:layout_marginStart="24dp"
-            android:layout_marginEnd="8dp"
+            android:inputType="textPersonName"
     />
 
     <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
             android:text="Email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-
-            android:layout_marginTop="8dp" android:layout_marginStart="24dp"
-            android:layout_marginBottom="8dp"
     />
 
 
-
     <EditText
+            android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/namatoko" android:layout_marginStart="24dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
     />
 
     <TextView
 
+            android:id="@+id/tvPassword"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+
+            android:layout_marginBottom="8dp"
             android:text="Password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:layout_marginBottom="8dp"
-
-            android:layout_marginStart="24dp"
-            android:id="@+id/textView2"/>
+    />
 
     <EditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" android:ems="10"
             android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/password" android:layout_marginStart="24dp"
-            android:layout_marginEnd="8dp"
     />
 
     <TextView
-            android:text="Confirm Password"
+            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
+            android:layout_marginStart="10dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginStart="24dp"
+            android:text="Confirm Password"
     />
     <EditText
+            android:id="@+id/etConfirmPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" android:ems="10"
             android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/confirmpass" android:layout_marginStart="24dp"
-            android:layout_marginEnd="8dp"
     />
 
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text=""
-            android:layout_gravity="center_horizontal"/>
+    <Button
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Register"/>
 
 
 </LinearLayout>
