@@ -19,6 +19,7 @@ class GarageSaleViewModel: ViewModel() {
     val garageSaleProduct: LiveData<List<GarageSaleProductListItem>>
         get() = _garageSaleProduct
 
+
     @SuppressLint("CheckResult")
     fun getAllGarageSaleProducts(){
         garageSaleService.getAllGarageSaleProducts()
