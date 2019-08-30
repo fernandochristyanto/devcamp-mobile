@@ -17,7 +17,8 @@
 
         </activity>
 
-        <activity android:name=".module.product_detail.ProductDetailActivity">
+        <activity android:name=".module.product_detail.ProductDetailActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         </activity>
         <activity android:name=".module.my_products.MyProductsActivity"

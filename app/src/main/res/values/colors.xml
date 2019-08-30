@@ -5,5 +5,6 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="tokpedgreen">#47AC2D</color>
+    <color name="tokpedorange">#FA591D</color>
     <color name="placeholder">#C4C4C4</color>
 </resources>

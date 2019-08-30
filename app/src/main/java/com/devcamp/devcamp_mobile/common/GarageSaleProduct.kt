@@ -13,5 +13,6 @@ data class GarageSaleProduct(
     @SerializedName("description") var description: String,
     @SerializedName("stock") var stock: Int,
     @SerializedName("charity") var charity: Boolean,
-    @SerializedName("curated") var curated: Boolean
+    @SerializedName("curated") var curated: Boolean,
+    @SerializedName("image_url") var imageUrl: String
 )

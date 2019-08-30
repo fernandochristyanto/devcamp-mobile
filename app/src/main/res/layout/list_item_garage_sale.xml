@@ -26,6 +26,16 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:srcCompat="@tools:sample/avatars"
             />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/charity_icon"
+                android:src="@drawable/charity_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="5dp"/>
+
             <TextView
                     android:id="@+id/tvPrice"
                     android:layout_width="wrap_content"
@@ -37,18 +47,18 @@
                     app:layout_constraintStart_toEndOf="@id/tvRp"
                     app:layout_constraintTop_toBottomOf="@id/tvItemName"/>
 
-            <TextView
-                    android:id="@+id/tvCharity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="start"
-                    android:text="lorem ipsum dolor et"
-                    android:layout_marginEnd="5dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginStart="5dp"
-                    app:layout_goneMarginEnd="5dp"
-                    app:layout_constraintTop_toBottomOf="@id/tvRp"/>
+            <!--<TextView-->
+                    <!--android:id="@+id/tvCharity"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="start"-->
+                    <!--android:text="lorem ipsum dolor et"-->
+                    <!--android:layout_marginEnd="5dp"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--android:layout_marginStart="5dp"-->
+                    <!--app:layout_goneMarginEnd="5dp"-->
+                    <!--app:layout_constraintTop_toBottomOf="@id/tvRp"/>-->
 
             <TextView
                     android:id="@+id/tvShopName"

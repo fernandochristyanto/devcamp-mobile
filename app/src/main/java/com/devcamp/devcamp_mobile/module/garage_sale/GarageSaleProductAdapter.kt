@@ -11,6 +11,7 @@ import com.devcamp.devcamp_mobile.R
 import com.devcamp.devcamp_mobile.common.GarageSaleProduct
 import com.devcamp.devcamp_mobile.common.GarageSaleProductListItem
 import com.devcamp.devcamp_mobile.module.product_detail.ProductDetailActivity
+import de.hdodenhof.circleimageview.CircleImageView
 
 class GarageSaleProductAdapter(val dataList: List<GarageSaleProductListItem>):RecyclerView.Adapter<GarageSaleProductAdapter.GarageSaleProductViewHolder>() {
 
@@ -30,14 +31,14 @@ class GarageSaleProductAdapter(val dataList: List<GarageSaleProductListItem>):Re
         val tvShopName: TextView
         val tvItemName: TextView
         val tvPrice: TextView
-        val tvCharity: TextView
+        val charityIcon: CircleImageView
 
         init {
             imItemImage = itemView.findViewById(R.id.imItemImage)
             tvShopName = itemView.findViewById(R.id.tvShopName)
             tvItemName = itemView.findViewById(R.id.tvItemName)
             tvPrice = itemView.findViewById(R.id.tvPrice)
-            tvCharity = itemView.findViewById(R.id.tvCharity)
+            charityIcon = itemView.findViewById(R.id.charity_icon)
             itemView.setOnClickListener(this)
         }
     }
@@ -51,9 +52,9 @@ class GarageSaleProductAdapter(val dataList: List<GarageSaleProductListItem>):Re
         Glide.with(holder.itemView).load(dataList[position].imageUrl).into(holder.imItemImage)
 
         if (dataList[position].charity) {
-            holder.tvCharity.text = "dana yang didapat akan di donasikan"
+            holder.charityIcon.visibility = View.VISIBLE
         } else {
-            holder.tvCharity.text = ""
+            holder.charityIcon.visibility = View.GONE
         }
         holder.bind(dataList[position])
     }
