@@ -4,8 +4,9 @@ import com.devcamp.devcamp_mobile.common.GarageSaleProduct
 import io.reactivex.Single
 import retrofit2.http.Body
 import retrofit2.http.POST
+import retrofit2.http.Path
 
-interface GarageSaleService{
-    @POST("/products/garageSale")
-    fun getAllGarageSaleProducts(): Single<GarageSaleProduct>
+interface MyProductsService{
+    @POST("/shop/{id}/products")
+    fun getMyProducts(@Path("id") id: Int): Single<GarageSaleProduct>
 }
