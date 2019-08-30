@@ -12,16 +12,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 
-class GarageSaleActivity : AppCompatActivity() {
+class MyProductsActivity : AppCompatActivity() {
 
     private lateinit var viewModel: MyProductsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_garage_sale)
+        setContentView(R.layout.activity_my_products)
 
         viewModel = ViewModelProviders.of(this).get(MyProductsViewModel::class.java)
-        viewModel.getMyProducts()
+        viewModel.getMyProducts(1)
         viewModel.myProducts.observe(this, Observer {
             //            Toast.makeText(LoginActivity@this, it.email, Toast.LENGTH_SHORT).show()
         })
@@ -36,7 +36,7 @@ class GarageSaleActivity : AppCompatActivity() {
         datas.add(GarageSaleProduct(6, 6, 6, "Satu",111111, "satsatsat", 3, true, false))
         datas.add(GarageSaleProduct(7, 7, 7, "Satu",111111, "satsatsat", 3, false, false))
 
-        val recyclerView = findViewById(R.id.recyclerView) as RecyclerView
+        val recyclerView = findViewById(R.id.recyclewViewMyProducts) as RecyclerView
         val adapter = MyProductsAdapter(datas)
         val layoutManager = LinearLayoutManager(this)
         recyclerView.setLayoutManager(layoutManager)

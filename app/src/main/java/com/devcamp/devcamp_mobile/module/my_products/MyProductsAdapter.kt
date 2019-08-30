@@ -15,13 +15,11 @@ class MyProductsAdapter(val dataList: List<GarageSaleProduct>):RecyclerView.Adap
         val imItemImage: ImageView
         val tvItemName: TextView
         val tvPrice: TextView
-        val tvCharity: TextView
 
         init {
             imItemImage = itemView.findViewById(R.id.imItemImage)
             tvItemName = itemView.findViewById(R.id.tvItemName)
             tvPrice = itemView.findViewById(R.id.tvPrice)
-            tvCharity = itemView.findViewById(R.id.tvCharity)
         }
     }
 
