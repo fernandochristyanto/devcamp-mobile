@@ -10,10 +10,22 @@ import com.bumptech.glide.Glide
 import com.devcamp.devcamp_mobile.R
 import com.devcamp.devcamp_mobile.common.GarageSaleProduct
 import com.devcamp.devcamp_mobile.common.GarageSaleProductListItem
+import com.devcamp.devcamp_mobile.module.product_detail.ProductDetailActivity
 
 class GarageSaleProductAdapter(val dataList: List<GarageSaleProductListItem>):RecyclerView.Adapter<GarageSaleProductAdapter.GarageSaleProductViewHolder>() {
 
-    class GarageSaleProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class GarageSaleProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
+        lateinit var product: GarageSaleProductListItem
+
+        override fun onClick(v: View?) {
+            val intent = ProductDetailActivity.newIntent(itemView.context, product.id)
+            itemView.context.startActivity(intent)
+        }
+
+        fun bind(productListItem: GarageSaleProductListItem){
+            product = productListItem
+        }
+
         val imItemImage: ImageView
         val tvShopName: TextView
         val tvItemName: TextView
@@ -26,6 +38,7 @@ class GarageSaleProductAdapter(val dataList: List<GarageSaleProductListItem>):Re
             tvItemName = itemView.findViewById(R.id.tvItemName)
             tvPrice = itemView.findViewById(R.id.tvPrice)
             tvCharity = itemView.findViewById(R.id.tvCharity)
+            itemView.setOnClickListener(this)
         }
     }
 
@@ -42,6 +55,7 @@ class GarageSaleProductAdapter(val dataList: List<GarageSaleProductListItem>):Re
         } else {
             holder.tvCharity.text = ""
         }
+        holder.bind(dataList[position])
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GarageSaleProductViewHolder {
@@ -50,9 +64,4 @@ class GarageSaleProductAdapter(val dataList: List<GarageSaleProductListItem>):Re
         return GarageSaleProductViewHolder(view)
 
     }
-
-
-
-
-
 }

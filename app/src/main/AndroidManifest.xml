@@ -8,9 +8,11 @@
             android:allowBackup="true"
             android:label="@string/app_name"
             android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
-        <activity android:name=".module.Register.RegisterTokoViewModel">
+        <activity android:name=".module.product_detail.ProductDetailActivity">
         </activity>
         <activity android:name=".module.garage_sale.GarageSaleActivity">
         </activity>
@@ -26,6 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
