@@ -10,5 +10,4 @@ import retrofit2.http.POST
 interface GarageSaleService{
     @GET("/products/garagesale")
     fun getAllGarageSaleProducts(): Single<List<GarageSaleProductListItem>>
-
 }

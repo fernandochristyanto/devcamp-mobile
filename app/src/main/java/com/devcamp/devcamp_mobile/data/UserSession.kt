@@ -10,6 +10,6 @@ class UserSession {
             user = loginUser
         }
 
-
+        fun getUser(): User? = user
     }
 }
