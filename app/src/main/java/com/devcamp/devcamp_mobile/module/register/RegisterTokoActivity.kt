@@ -23,12 +23,28 @@ class RegisterTokoActivity : AppCompatActivity() {
         var email=findViewById<EditText>(R.id.etEmail).text.toString()
         var password=findViewById<EditText>(R.id.etPassword).text.toString()
         var confirmPassword=findViewById<EditText>(R.id.etConfirmPass).text.toString()
+
+
+        var status:String?=null;
         var statusDTO:ShopRegistrationDTO = ShopRegistrationDTO(name,location,phoneNumber,email,password,confirmPassword)
         val viewModel = ViewModelProviders.of(this).get(RegisterTokoViewModel::class.java)
-        viewModel.getStatusRegistration()
+        viewModel.getStatusRegistration(statusDTO)
         viewModel.shopStatus.observe(this, Observer {
+            status=it.status
             Toast.makeText(LoginActivity@this, it.status, Toast.LENGTH_SHORT).show()
         })
+        if(status!=null){
+            if(status.equals("success",true)){
+                //will be implemented
+
+            }
+            else{
+                Toast.makeText(this,"Fail register",Toast.LENGTH_SHORT).show()
+            }
+
+        }
+
+
 
 //        @SerializedName("name") var name: String,
 //        @SerializedName("location") var location: String,
