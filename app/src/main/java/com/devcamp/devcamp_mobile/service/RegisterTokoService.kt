@@ -9,5 +9,5 @@ import retrofit2.http.POST
 
 interface RegisterTokoService {
     @POST("/users/shopregistration")
-    fun getStatusRegistration(@Body statusDTO:ShopRegistrationDTO): Single<ShopStatus>
+    fun registerShop(@Body statusDTO:ShopRegistrationDTO): Single<ShopStatus>
 }

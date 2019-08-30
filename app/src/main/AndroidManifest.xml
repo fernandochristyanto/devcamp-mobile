@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.devcamp.devcamp_mobile">
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.devcamp.devcamp_mobile">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-            android:allowBackup="true"
-            android:label="@string/app_name"
-            android:supportsRtl="true"
-            android:theme="@style/AppTheme"
-            android:usesCleartextTraffic="true">
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
 
         <activity android:name=".module.add_item.AddItemActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <action android:name="android.intent.action.VIEW"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
 
         <activity android:name=".module.product_detail.ProductDetailActivity">
@@ -26,11 +22,14 @@
         <activity android:name=".module.my_products.MyProductsActivity">
 
         </activity>
-        <activity android:name=".module.garage_sale.GarageSaleActivity">
+        <activity
+            android:name=".module.garage_sale.GarageSaleActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
         <activity android:name=".module.login.LoginActivity">
         </activity>
-        <activity android:name=".module.main.MainActivity">
+        <activity android:name=".module.main.MainActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="android.intent.action.VIEW"/>
@@ -38,7 +37,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".module.register.RegisterTokoActivity">
+        <activity android:name=".module.register.RegisterTokoActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         </activity>
 

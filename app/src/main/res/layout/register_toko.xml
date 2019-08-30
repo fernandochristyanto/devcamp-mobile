@@ -1,137 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
-              android:id="@+id/linearLayout"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-              android:orientation="vertical" android:padding="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-
-    <TextView
-            android:id="@+id/tvNamaToko"
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:text="Nama Toko"
-    />
-
-    <EditText
-            android:id="@+id/etNamaToko"
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="8dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-    />
+            android:orientation="vertical"
+            android:padding="10dp">
 
-    <TextView
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="Kota"
-    />
+            <ImageView
+                android:id="@+id/ivPoster"
+                android:layout_marginTop="20dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/nostore"/>
+            <TextView
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:gravity="center"
+                android:text="Mulai berjualan barang barang yang tidak digunakan, semua dipermudah dengan GarageSale! yuk #MulaiAjaDulu"
+                android:textSize="18sp"/>
 
-    <EditText
-            android:id="@+id/etLocation"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etNamatoko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Toko"
+                    android:textColorHighlight="@color/tokpedgreen"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Kota / Kabupaten"
+                    android:textColorHighlight="@color/tokpedgreen"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etNoHp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nomor Telepon"
+                    android:textColorHighlight="@color/tokpedgreen"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:textColorHighlight="@color/tokpedgreen"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColorHighlight="@color/tokpedgreen"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etConfirmPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Konfirmasi Password"
+                    android:textColorHighlight="@color/tokpedgreen"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp" android:ems="10"
-            android:inputType="textPersonName"
-    />
-
-    <TextView
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="10dp"
-            android:text="No. HP"
-    />
-    <EditText
-            android:id="@+id/etNoHp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-    />
-
-    <TextView
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="10dp"
-            android:text="Email"
-    />
-
-
-    <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="8dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-    />
-
-    <TextView
-
-            android:id="@+id/tvPassword"
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-
-            android:layout_marginBottom="8dp"
-            android:text="Password"
-    />
-
-    <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp" android:ems="10"
-            android:inputType="textPersonName"
-    />
-
-    <TextView
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="8dp"
-            android:text="Confirm Password"
-    />
-    <EditText
-            android:id="@+id/etConfirmPass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp" android:ems="10"
-            android:inputType="textPersonName"
-    />
-
-    <Button
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Register"/>
-
-
-</LinearLayout>
-
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/flat_btn_background"
+            android:text="Daftar"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</ScrollView>
 

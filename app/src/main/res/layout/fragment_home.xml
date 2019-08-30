@@ -84,7 +84,7 @@
         android:layout_height="wrap_content"
         android:text="Terlaris untukmu"
         app:layout_constraintTop_toBottomOf="@id/p31"
-        style="@style/TextAppearance.AppCompat.Title"
+        style="@style/TextAppearance.AppCompat.Subhead"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="20dp"/>
     <TextView
@@ -95,7 +95,7 @@
         android:enabled="false"
         app:layout_constraintBaseline_toBaselineOf="@id/tvTerlaris"
         app:layout_constraintTop_toBottomOf="@id/p31"
-        style="@style/TextAppearance.AppCompat.Title"
+        style="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"/>
     <View
@@ -136,7 +136,7 @@
         android:layout_height="wrap_content"
         android:text="Garage Sales!"
         app:layout_constraintTop_toBottomOf="@id/p41"
-        style="@style/TextAppearance.AppCompat.Title"
+        style="@style/TextAppearance.AppCompat.Subhead"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="20dp"/>
     <TextView
@@ -146,7 +146,7 @@
         android:text="Lihat semua"
         app:layout_constraintBaseline_toBaselineOf="@id/tvGrgSales"
         app:layout_constraintTop_toBottomOf="@id/p41"
-        style="@style/TextAppearance.AppCompat.Title"
+        style="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"/>
     <View

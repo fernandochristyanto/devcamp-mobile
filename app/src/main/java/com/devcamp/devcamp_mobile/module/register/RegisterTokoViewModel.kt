@@ -21,8 +21,8 @@ class RegisterTokoViewModel : ViewModel() {
     val shopStatus : LiveData<ShopStatus>get()  = _registerTokoService
 
     @SuppressLint("CheckResult")
-    fun getStatusRegistration(statusDTO:ShopRegistrationDTO) {
-        registerTokoService.getStatusRegistration(statusDTO)
+    fun registerShop(statusDTO:ShopRegistrationDTO) {
+        registerTokoService.registerShop(statusDTO)
             .subscribeOn(Schedulers.io())
             .doOnSubscribe { }
             .doOnError {

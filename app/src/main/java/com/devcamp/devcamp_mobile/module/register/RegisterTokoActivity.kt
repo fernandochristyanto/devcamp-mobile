@@ -10,6 +10,7 @@ import com.devcamp.devcamp_mobile.R
 import com.devcamp.devcamp_mobile.common.dto.ShopRegistrationDTO
 import com.devcamp.devcamp_mobile.module.register.RegisterTokoViewModel
 import com.devcamp.devcamp_mobile.module.login.LoginViewModel
+import com.google.android.material.textfield.TextInputLayout
 import com.google.gson.annotations.SerializedName
 
 class RegisterTokoActivity : AppCompatActivity() {
@@ -18,25 +19,18 @@ class RegisterTokoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_toko)
 
-        val name=findViewById<EditText>(R.id.etNamaToko).text.toString()
-        val location=findViewById<EditText>(R.id.etLocation).text.toString()
-        val phoneNumber=findViewById<EditText>(R.id.etNoHp).text.toString()
-        val email=findViewById<EditText>(R.id.etEmail).text.toString()
-        val password=findViewById<EditText>(R.id.etPassword).text.toString()
-        val confirmPassword=findViewById<EditText>(R.id.etConfirmPass).text.toString()
+        val name=findViewById<TextInputLayout>(R.id.etNamatoko).editText!!.text.toString()
+        val location=findViewById<TextInputLayout>(R.id.etLocation).editText!!.text.toString()
+        val phoneNumber=findViewById<TextInputLayout>(R.id.etNoHp).editText!!.text.toString()
+        val email=findViewById<TextInputLayout>(R.id.etEmail).editText!!.text.toString()
+        val password=findViewById<TextInputLayout>(R.id.etPassword).editText!!.text.toString()
+        val confirmPassword=findViewById<TextInputLayout>(R.id.etConfirmPass).editText!!.text.toString()
 
         var statusDTO:ShopRegistrationDTO = ShopRegistrationDTO(name,location,phoneNumber,email,password,confirmPassword)
         val viewModel = ViewModelProviders.of(this).get(RegisterTokoViewModel::class.java)
-        viewModel.getStatusRegistration(statusDTO)
+        viewModel.registerShop(statusDTO)
         viewModel.shopStatus.observe(this, Observer {
 
         })
-
-//        @SerializedName("name") var name: String,
-//        @SerializedName("location") var location: String,
-//        @SerializedName("phone_number") var phone_number: String,
-//        @SerializedName("email") var email: String?,
-//        @SerializedName("password") var password: String?,
-//        @SerializedName("user_id") var user_id: String?
     }
 }
