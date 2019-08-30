@@ -1,6 +1,7 @@
 package com.devcamp.devcamp_mobile.module.login
 
 import android.annotation.SuppressLint
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -17,11 +18,13 @@ class LoginViewModel: ViewModel() {
         get() = _user
 
     @SuppressLint("CheckResult")
-    fun getUserByEmailAndPassword(email: String, password: String){
-        userService.getUserByEmailAndPassword(email, password)
+    fun getUserByEmailAndPassword(){
+        userService.getUserByEmailAndPassword()
             .subscribeOn(Schedulers.io())
             .doOnSubscribe {  }
-            .doOnError {  }
+            .doOnError {
+                Log.d("asd", "asd")
+            }
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
                 _user.postValue(it)

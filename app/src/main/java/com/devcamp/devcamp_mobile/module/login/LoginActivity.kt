@@ -15,7 +15,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         viewModel = ViewModelProviders.of(this).get(LoginViewModel::class.java)
-        viewModel.getUserByEmailAndPassword("devcamp", "devcamp")
+        viewModel.getUserByEmailAndPassword()
         viewModel.user.observe(this, Observer {
             Toast.makeText(LoginActivity@this, it.email, Toast.LENGTH_SHORT).show()
         })

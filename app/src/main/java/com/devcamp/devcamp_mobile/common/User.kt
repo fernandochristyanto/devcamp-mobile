@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 data class User(
-    @SerializedName("ID") var id: Int,
+    @SerializedName("id") var id: Int,
     @SerializedName("email") var email: String,
-    @SerializedName("password") var password: String
+    @SerializedName("password") var password: String?
 )
