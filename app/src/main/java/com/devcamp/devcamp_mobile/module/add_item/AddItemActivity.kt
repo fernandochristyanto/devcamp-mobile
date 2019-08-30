@@ -33,7 +33,6 @@ class AddItemActivity : AppCompatActivity() {
 
         val btnSimpan: Button = findViewById(R.id.btnSimpan)
         val btnSimpanTambah: Button = findViewById(R.id.btnSimpanTambah)
-        val btnKeluar: Button = findViewById(R.id.btnKeluar)
 
         val txtProductName: TextInputEditText = findViewById(R.id.txtProductNameAddItem)
         val txtPrice: TextInputEditText = findViewById(R.id.txtPriceAddItem)

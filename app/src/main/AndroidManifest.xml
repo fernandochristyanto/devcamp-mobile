@@ -12,7 +12,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".module.add_item.AddItemActivity">
+        <activity android:name=".module.add_item.AddItemActivity"
+            android:parentActivityName=".module.main.MainActivity">
 
         </activity>
 
