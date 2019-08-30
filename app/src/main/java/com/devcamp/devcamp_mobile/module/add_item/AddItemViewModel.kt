@@ -1,4 +1,4 @@
-package com.devcamp.devcamp_mobile.module.my_products
+package com.devcamp.devcamp_mobile.module.add_item
 
 import android.annotation.SuppressLint
 import android.util.Log
@@ -6,20 +6,22 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.devcamp.devcamp_mobile.common.GarageSaleProduct
-import com.devcamp.devcamp_mobile.service.MyProductsService
+import com.devcamp.devcamp_mobile.common.dto.AddItemRequestDTO
+import com.devcamp.devcamp_mobile.service.GarageSaleService
 import com.devcamp.devcamp_mobile.util.NetworkUtil
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
-class MyProductsViewModel: ViewModel() {
-    private val myProductsService = NetworkUtil.getRetrofit().create(MyProductsService::class.java)
-    private val _myProducts = MutableLiveData<List<GarageSaleProduct>>()
-    val myProducts: LiveData<List<GarageSaleProduct>>
-        get() = _myProducts
+class AddItemViewModel: ViewModel() {
+    private val garageSaleService = NetworkUtil.getRetrofit().create(GarageSaleService::class.java)
+
+    private val _garageSaleProduct = MutableLiveData<GarageSaleProduct>()
+    val garageSaleProduct: LiveData<GarageSaleProduct>
+        get() = _garageSaleProduct
 
     @SuppressLint("CheckResult")
-    fun getMyProducts(id: Int){
-        myProductsService.getMyProducts(id)
+    fun addNewItems(itemDTO: AddItemRequestDTO){
+        garageSaleService.addNewItems(itemDTO)
             .subscribeOn(Schedulers.io())
             .doOnSubscribe {  }
             .doOnError {
@@ -27,7 +29,9 @@ class MyProductsViewModel: ViewModel() {
             }
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                _myProducts.postValue(it)
+                _garageSaleProduct.postValue(it)
             }, {})
+
+
     }
 }

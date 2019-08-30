@@ -1,4 +1,4 @@
-package com.devcamp.devcamp_mobile.module.Register
+package com.devcamp.devcamp_mobile.module.register
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity

@@ -8,5 +8,5 @@ import retrofit2.http.Path
 
 interface MyProductsService{
     @POST("/shop/{id}/products")
-    fun getMyProducts(@Path("id") id: Int): Single<GarageSaleProduct>
+    fun getMyProducts(@Path("id") id: Int): Single<List<GarageSaleProduct>>
 }

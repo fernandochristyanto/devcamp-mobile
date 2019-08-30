@@ -20,17 +20,31 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="154dp">
 
-            <Button
-                android:id="@+id/btnSellProduct"
+            <LinearLayout
+                android:id="@+id/promotion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="I want to sell my item"/>
+                android:orientation="vertical"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Any unused item?"/>
+                <Button
+                    android:id="@+id/btnSellProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/tokpedgreen"
+                    android:text="Sell an item"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/btnSellProduct"
+                android:layout_below="@id/promotion"
                 android:layout_weight="2"/>
 
         </RelativeLayout>
