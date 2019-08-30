@@ -20,7 +20,7 @@
     />
 
     <EditText
-            android:id="@+id/namatoko"
+            android:id="@+id/etNamaToko"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -39,7 +39,7 @@
     />
 
     <EditText
-            android:id="@+id/etNamaToko"
+            android:id="@+id/etLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"

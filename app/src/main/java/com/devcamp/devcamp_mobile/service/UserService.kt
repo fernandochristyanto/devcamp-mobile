@@ -10,6 +10,6 @@ interface UserService{
     @POST("/users")
     fun getUserByEmailAndPassword(): Single<User>
 
-//    @POST("/users/login")
-//    fun login(@Body userDTO:UserLoginRequestDTO): Single<User>
+    @POST("/users/login")
+    fun login(@Body userDTO:UserLoginRequestDTO): Single<User>
 }

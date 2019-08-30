@@ -29,7 +29,5 @@ class MyProductsViewModel: ViewModel() {
             .subscribe({
                 _myProducts.postValue(it)
             }, {})
-
-
     }
 }
