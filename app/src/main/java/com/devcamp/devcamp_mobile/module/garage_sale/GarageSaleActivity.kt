@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.devcamp.devcamp_mobile.data.UserSession
+import com.devcamp.devcamp_mobile.module.add_item.AddItemActivity
 import com.devcamp.devcamp_mobile.module.register.RegisterTokoActivity
 
 class GarageSaleActivity : AppCompatActivity() {
@@ -35,7 +36,8 @@ class GarageSaleActivity : AppCompatActivity() {
             }
             else{
                 // Directly to new product page
-
+                val intent = Intent(this, AddItemActivity::class.java)
+                startActivity(intent)
             }
         }
 

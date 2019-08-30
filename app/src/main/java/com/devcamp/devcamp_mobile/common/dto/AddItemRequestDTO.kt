@@ -5,8 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 data class AddItemRequestDTO(
-    @SerializedName("shop_id") var shopID: Int,
-    @SerializedName("catalog_id") var catalogID: Int,
+    @SerializedName("user_id") var userID: Int,
     @SerializedName("name") var name: String,
     @SerializedName("price") var price: Int,
     @SerializedName("description") var description: String,

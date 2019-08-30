@@ -12,7 +12,7 @@ data class ShopRegistrationDTO (
     @SerializedName("phone_number") var phone_number: String,
     @SerializedName("email") var email: String?,
     @SerializedName("password") var password: String?,
-    @SerializedName("user_id") var user_id: String?
+    @SerializedName("user_id") var user_id: Int?
 
 )
 

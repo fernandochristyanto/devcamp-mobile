@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.FrameLayout
 import butterknife.BindView
 import com.devcamp.devcamp_mobile.R
+import com.devcamp.devcamp_mobile.common.User
+import com.devcamp.devcamp_mobile.data.UserSession
 import com.devcamp.devcamp_mobile.module.main.screen.HomeFragment
 import com.devcamp.devcamp_mobile.module.main.screen.UserFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -17,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        UserSession.setUser(User(1, "devcamp@devcamp", "devcamp"))
 
         bottomNav = findViewById(R.id.bottomNav)
         container = findViewById(R.id.container )

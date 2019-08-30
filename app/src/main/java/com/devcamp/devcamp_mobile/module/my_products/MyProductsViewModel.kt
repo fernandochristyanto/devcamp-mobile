@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.devcamp.devcamp_mobile.common.GarageSaleProduct
+import com.devcamp.devcamp_mobile.common.GarageSaleProductListItem
 import com.devcamp.devcamp_mobile.service.MyProductsService
 import com.devcamp.devcamp_mobile.util.NetworkUtil
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -13,8 +14,8 @@ import io.reactivex.schedulers.Schedulers
 
 class MyProductsViewModel: ViewModel() {
     private val myProductsService = NetworkUtil.getRetrofit().create(MyProductsService::class.java)
-    private val _myProducts = MutableLiveData<List<GarageSaleProduct>>()
-    val myProducts: LiveData<List<GarageSaleProduct>>
+    private val _myProducts = MutableLiveData<List<GarageSaleProductListItem>>()
+    val myProducts: LiveData<List<GarageSaleProductListItem>>
         get() = _myProducts
 
     @SuppressLint("CheckResult")

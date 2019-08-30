@@ -8,8 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.devcamp.devcamp_mobile.R
 import com.devcamp.devcamp_mobile.common.GarageSaleProduct
+import com.devcamp.devcamp_mobile.common.GarageSaleProductListItem
 
-class MyProductsAdapter(val dataList: List<GarageSaleProduct>):RecyclerView.Adapter<MyProductsAdapter.MyProductsViewHolder>() {
+class MyProductsAdapter(val dataList: List<GarageSaleProductListItem>):RecyclerView.Adapter<MyProductsAdapter.MyProductsViewHolder>() {
 
     class MyProductsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imItemImage: ImageView
