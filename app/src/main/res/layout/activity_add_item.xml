@@ -122,6 +122,12 @@
                 android:text="Apakah dana yang didapat dari item ini akan didonasikan?"
                 android:textSize="16dp" />
 
+        <Spinner android:layout_width="match_parent" android:layout_height="wrap_content"
+
+            android:entries="@array/german_familienname" android:gravity="center"
+                 android:visibility="gone" android:id="@+id/spinnerLembaga"
+        ></Spinner>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
