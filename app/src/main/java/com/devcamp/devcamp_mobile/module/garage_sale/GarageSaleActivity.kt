@@ -27,13 +27,13 @@ class GarageSaleActivity : AppCompatActivity() {
         })
 
         var datas = ArrayList<GarageSaleProduct>()
-        datas.add(GarageSaleProduct(0, 0, 0, "Nol", 100000, "nolnolnol", 2, false, false))
+        datas.add(GarageSaleProduct(0, 0, 0, "Nol", 100000, "nolnolnol", 2, true, false))
         datas.add(GarageSaleProduct(1, 1, 1, "Satu",111111, "satsatsat", 3, false, false))
-        datas.add(GarageSaleProduct(2, 2, 2, "Satu",111111, "satsatsat", 3, false, false))
-        datas.add(GarageSaleProduct(3, 3, 3, "Satu",111111, "satsatsat", 3, false, false))
+        datas.add(GarageSaleProduct(2, 2, 2, "Satu",111111, "satsatsat", 3, true, false))
+        datas.add(GarageSaleProduct(3, 3, 3, "Satu",111111, "satsatsat", 3, true, false))
         datas.add(GarageSaleProduct(4, 4, 4, "Satu",111111, "satsatsat", 3, false, false))
-        datas.add(GarageSaleProduct(5, 5, 5, "Satu",111111, "satsatsat", 3, false, false))
-        datas.add(GarageSaleProduct(6, 6, 6, "Satu",111111, "satsatsat", 3, false, false))
+        datas.add(GarageSaleProduct(5, 5, 5, "Satu",111111, "satsatsat", 3, true, false))
+        datas.add(GarageSaleProduct(6, 6, 6, "Satu",111111, "satsatsat", 3, true, false))
         datas.add(GarageSaleProduct(7, 7, 7, "Satu",111111, "satsatsat", 3, false, false))
 
         val recyclerView = findViewById(R.id.recyclerView) as RecyclerView
