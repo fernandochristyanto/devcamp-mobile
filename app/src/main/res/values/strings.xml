@@ -1,4 +1,20 @@
 <resources>
     <string name="app_name">devcamp-mobile</string>
     <string name="form_nametoko_register">Nama Toko</string>
+    <string-array name="german_familienname">
+        <item>Pilih lembaga penyalur zakat</item>
+        <item>Baznas</item>
+        <item>Dompet Dhuafa</item>
+        <item>LAZ Al-Azhar</item>
+        <item>Yayasan Anyo Indonesia</item>
+        <item>NU Care-LAZISNU</item>
+        <item>Rumah Yatim</item>
+        <item>WeCare.id</item>
+        <item>Rumah Zakat</item>
+        <item>ACT</item>
+        <item>PKPU</item>
+        <item>YCAB</item>
+        <item>YPAC</item>
+        <item>Yayasan Tangan Pengharapan</item>
+    </string-array>
 </resources>
