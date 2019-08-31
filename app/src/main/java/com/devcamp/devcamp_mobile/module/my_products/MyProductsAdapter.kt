@@ -18,16 +18,19 @@ class MyProductsAdapter(val dataList: List<GarageSaleProductListItem>) :
         val imItemImage: ImageView
         val tvItemName: TextView
         val tvPrice: TextView
+        val tvStock: TextView
 
         init {
             imItemImage = itemView.findViewById(R.id.imItemImage)
             tvItemName = itemView.findViewById(R.id.tvItemName)
             tvPrice = itemView.findViewById(R.id.tvPrice)
+            tvStock = itemView.findViewById(R.id.tvStock)
         }
 
         fun bind(productListItem: GarageSaleProductListItem) {
             tvItemName.text = productListItem.name
             tvPrice.text = productListItem.price.toString()
+            tvStock.text = productListItem.stock.toString()
             Glide.with(itemView.context).load(productListItem.imageUrl).into(imItemImage)
         }
     }
